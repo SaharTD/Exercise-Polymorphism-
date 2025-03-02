@@ -1,6 +1,7 @@
 public class Bike implements Vehicle{
-    String brand;
-    double hours;
+    private String brand;
+    private double hours;
+
 
     public Bike() {
     }
@@ -28,15 +29,16 @@ public class Bike implements Vehicle{
 
     @Override
     public double calculateRentalCost() {
-        double rent= hours*10;
+        double rent= hours*hours_rate;
         return rent;
     }
 
     @Override
     public void displayDetails() {
+          System.out.println();
         System.out.println(
        "  Bike Brand: "+this.brand+
-       "\nHourly Rental Rate: 10$"+
+       "\nHourly Rental Rate: "+hours_rate+"$"+
        " Rental Cost: "+this.calculateRentalCost()+"$");
     }
 }
