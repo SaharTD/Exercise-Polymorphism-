@@ -34,7 +34,7 @@ public class Main {
                 String m = input.next();
                 System.out.println("Enter Rental Days:");
                 int d = input.nextInt();
-                Vehicle car1 =new Car(d,m);
+                Vehicle car1 =new Car(m,d);
                 rentedVehicles.add(car1);
                 car1.displayDetails();
 
