@@ -1,6 +1,6 @@
 public class Truck implements Vehicle{
-    String type;
-    int week;
+   private String type;
+    private int week;
 
     public Truck() {
     }
@@ -28,14 +28,15 @@ public class Truck implements Vehicle{
 
     @Override
     public double calculateRentalCost() {
-        double rent=500*week;
+        double rent=week_rate*week;
         return rent;
     }
 
     @Override
     public void displayDetails() {
+        System.out.println();
         System.out.println( "\n Truck Type: "+this.type
-                +"\n Weekly Rental Rate: $500.0"+
+                +"\n Weekly Rental Rate: "+week_rate+"$"+
                 "\nRental Cost: "+this.calculateRentalCost()+"$");
     }
 }
